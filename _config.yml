@@ -1,1 +1,13 @@
-theme: jekyll-theme-minimal
+title: Data Science 1 Project
+author: Brendan Whitney
+email: bwhitne1@uvm.edu
+description: > # this means ignore newlines until "baseurl"
+    Completed project for my Data Science 1 class Fall 2018.
+
+# social links
+github_username: brendanwhit
+linkedin: brendan-whitney-6a57a712b
+
+show_excerpts: true # set to false to remove excerpts on the homepage
+
+theme: minima
