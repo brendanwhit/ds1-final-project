@@ -307,19 +307,6 @@ the six most important variables were chosen, where importance was
 averaged over the entire season.
 Table 1 shows the 6 most important features.
 
-\begin{table}[ht]
-    \centering
-    \begin{tabular}{l | c c c c c c}
-        Feature &  Away\_PS & TMAX & Home\_PS & TMIN & HOME\_WP & AWAY\_WP \\
-        \midrule
-        Importance Score & 0.111 & 0.101 & 0.098 & 0.089 & 0.076 & 0.075 \\
-    \end{tabular}
-    \caption{Table~\label{Tab:Importance} indicates the 6 most important
-features ranked from most to least important.}
-
-
-\end{table}
-
 <table>
 <caption> Table 1 indicates the 6 most important features ranked from most to 
 least important </caption>
