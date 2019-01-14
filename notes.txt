@@ -1,0 +1,157 @@
+11.26.2018
+
+Ideas:
+Combine weather and game stats to better predict the winners of baseball games
+    Use the weather from the station nearest to the ballpark that the game was 
+    played in
+    Get weather for google big data query using SQL
+Use full batting stats from each game rather than just wins losses
+    Get baseball data from baseball reference
+        Scrape the website to customize the data I need
+
+11.27.2018
+
+Semi-successfully scraped the game by game data for every team
+    Couldn't get the pitching and hitting stats from each game like I wanted,
+    so I will start with:
+        runs scored
+        team records
+        location of game
+        team streaks
+
+Started lit review:
+    Article 1
+    Interesting ideas of testing different levels of models against each other.
+    Used the NFL as a test for the validity of predicting sports games.  I 
+    should look up more information about the power score calculated by the New
+    York Times. Introduced Probit model, which looks interesting (More research)
+    Model ideas from paper:
+        Null/Naive model - home team always wins
+        Game Stats model - pick a team based on basic game stats
+        Weather model - pick team based on performance during certain weather
+                        conditions
+        Combined model - combine the game stats and weather model
+        (time permitting)
+        Full Game Stats model - find a way to record the full hitting and
+                                pitching stats from each game to hopefully
+                                improve the accuracy of the model
+
+11.28.2018
+
+Continued Lit Review:
+    Article 2
+    Learned about the Pythagoreas Theorem as a potential predictive method
+    Has statistical grounding with Weibull distributions
+    Uses just runs scored and runs against
+    
+    Article 3
+    Uses data mining and machine learning to accurately predict the outcome of
+    MLB games.
+    The data processing techniques in this article provide a good basis to model
+    my processing techniques off.
+    Check out retrosheet game logs, for more game by game information.
+        Do this after initial analysis.
+
+
+Thoughts:
+    Potentially quantify chance in a meaningful way?
+        Chance would allow a team with a smaller probability of winning to win
+        Should be dependent on the difference between the probability of winning
+    Or if I can't implement chance, perhaps I could determine who the luckiest
+    teams are?
+        I.e who keeps winning games they shouldn't
+
+12.03.2018
+
+Finally finished collecting weather data
+    Lots of SQL on Google Big Query
+    Definitely want to write about the process in the final report
+        Probably inclued SQL in an appendix
+
+12.04.2018
+
+Correlation matrix shows lots of colinearity between the variables, which I
+think can be attributed to the series nature of the games played.
+    Teams play each other multiple games in a row, thus affecting their 
+    statistics in ways that relate to each other
+
+Work around Method 1:
+    Generate N seasons which only choose one game from each series
+    Probably pull these games from the individual files when building seasons
+        That will be the easiest way to choose one game from a series
+        ONLY BUILD THE SERIES FOR TEAMS THAT ARE HOME
+            This will help when pulling from the series to be automated in a 
+            nice manner
+
+Play around with idea of using games before May as training, and then May on
+as predictive to test the model on.
+    However, I want to use recursive logit, so once a game has been predicted,
+    move to the next date and train the model again for prediction
+
+For descriptive statistics, plot the accuracy of the three initial predicters I
+used as a function of the date
+    I would expect the earlier days of the season being harder to predict
+
+NEED TO CONSOLIDATE INITIAL MODELS WORK INTO FUNCTIONS
+    There is lots of repetition
+
+Random Forest feature extraction?
+    -Maybe!
+
+Make a plot of the weather data for BOS where the weather data for games played
+are highlighted in RED and other data is BLUE
+    Put all three on the same axis, unless it gets too messy
+
+Finished creating sample seasons, eliminating the series. Not much improvement 
+to correlation matrix, but perhaps we will still get better features
+    Run feature selection tomorrow on the full season and the sample seasons
+    Hopefully we can get something useful out of it
+    Will definitely run multiple regressions over the sample seasons to get
+    some confidence bands on coefficients
+
+! Need to make a helper function code for some filesystem functions like load
+filesystem
+
+12.05.2018
+
+Using random forest regressor to rank features. The rank of features are given
+for the entire season, perhaps I should use a day by day rank to determine the
+full range of values for each feature.
+    Trying it out on the sampled data.
+
+Think about not accumulating the runs scored per game.  Maybe only look at the 
+runs scored in the previous game.
+    A lot of the correlations between variables occur because of the
+    monotonically increasing values for baseball stats
+        Look into making the season static potentially
+
+Thoughts to reproduce chance:
+    Flip a coin, and pick the winner based on probability threshold.
+    This would give major underdogs a chance relative to their 
+    Definitely did NOT work
+
+Changing the regularizing from l2 to l1 to let the regression determine
+features itself
+
+
+Final step before report
+    Simulate 1000 (or 10000) seasons, and run logistic regressions on each 
+    season to gather statistics on different season accuracies
+
+
+Future Improvements
+    Think about lasso regression as a an improvement to deal with collinearity
+    From research looks like random forest feature extraction might not have 
+    been a great method because I have relatively few data points...
+        Perhaps a univariate feature extraction would have been better
+
+12.06.2018
+
+Finished Introduction, Data, and Initial Results.
+
+Tomorrow need to write Abstract, Methods, Regression Results, and Discussion.
+    THE END IS NEAR!
+
+12.07.2018
+DONE
+

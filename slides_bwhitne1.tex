@@ -1,0 +1,112 @@
+\documentclass{beamer}
+\usetheme{Boadilla}
+\usepackage{graphicx}
+
+\graphicspath{{plots/desc-stats/}{plots/}{plots/corr-mats/}}
+
+\title{Predicting Baseball Game Outcomes}
+\author{Brendan Whitney}
+\date{Monday, December 10th}
+
+\begin{document}
+
+\begin{frame}
+    \titlepage
+\end{frame}
+
+\begin{frame}{Data}
+    \begin{itemize}
+        \item Data from 2018 MLB Season
+        \item Consists of 2431 games
+        \item Baseball Statistics from baseball-reference.com
+        \begin{itemize}
+            \item Game Location
+            \item Runs Scored
+            \item Runs Allowed
+            \item Wins
+            \item Losses
+            \item Streak
+        \end{itemize}
+        \item Weather Data from Global Historical Climatology Network
+        \begin{itemize}
+            \item Maximum Temperature
+            \item Minimum Temperature
+            \item Precipitation
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Calculated Data}
+    \begin{itemize}
+        \item Pythagorean Score
+        \[
+            \cfrac{RS^\gamma}
+            {RS^\gamma + RA^\gamma}
+            \quad
+            \text{for}
+            \quad
+            \gamma = 1.79
+        \]
+        \item Win Percentage
+        \[
+            \cfrac{W}{W+L}
+        \]
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Correlations}
+    % Higly correlated data set
+    \includegraphics[width=0.9\textwidth]{full-season/combined-stats-corr-mat.jpg}
+\end{frame}
+
+\begin{frame}{Sampling Seasons}
+    \begin{itemize}
+        \item Sampled seasons to minimize correlations
+        \item Randomly chose 1 game from each series
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Sampling Correlations}
+    % Sampling Accomplished very little
+    \includegraphics[width=0.9\textwidth]{sampled-season/combined-stats-corr-mat.jpg}
+\end{frame}
+
+\begin{frame}{Feature Selection}
+    \begin{itemize}
+        \item Used a Random Forest Regressor for feature selection
+        \item Found six key features for regression
+        \begin{itemize}
+            \item Away\_PS
+            \item TMAX
+            \item Home\_PS
+            \item TMIN
+            \item Home\_WP
+            \item Away\_WP
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Feature Selection}
+    \includegraphics[width=0.9\textwidth]{feature-importance.jpg}
+\end{frame}
+
+\begin{frame}{Regression}
+    \begin{itemize}
+        \item 56.58\% accuracy for the full 2018 season
+            % Eh
+        \item For 1000 sampled seasons:
+        \begin{itemize}
+            \item 55.77\% mean accuracy
+            \item 1.7\% standard deviation
+        \end{itemize}
+        % Just choosing the team with the highest PS gives 57.56\% accuracy
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Regression}
+    \includegraphics[width=0.9\textwidth]{hist_acc.jpg}
+\end{frame}
+
+\end{document}
+
+
