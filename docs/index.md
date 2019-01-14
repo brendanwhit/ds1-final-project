@@ -136,17 +136,6 @@ Pythagorean scores and the win percentages of each team were calculated.
 For the Pythagorean score an exponent of 1.79 was used as per the Miller paper.
 The target variable of interest is whether the home team won the game.
 
-Figure~\ref{Fig:GPD} indicates the distribution of the number of games played
-per day over the course of the season.
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=.8\textwidth]{num-games-hist.jpg}
-    \caption{Figure~\label{Fig:GPD} represents the distribution of number of 
-    games played per day.}
-\end{figure}
-
-![Figure 1](plots/desc-stats/num-games-hist.jpg)
-
 {% include image.html url="plots/desc-stats/num-games-hist.jpg" description="Figure 1
 represents the distribution of the number of games played per day over the
 course of the season" %}
@@ -196,7 +185,7 @@ All stadiums were treated as open air stadiums despite the fact that
 and one stadium,
 Tropicana Field -- home of the Tampa Bay Rays,
 has a fixed roof. 
-Figure~\ref{Fig:Weather} shows the data gather for Fenway Park,
+Figure 2 shows the data gathered for Fenway Park,
 home of the Boston Red Sox,
 as an example for how the weather data was used.
 \begin{figure}[ht]
@@ -210,6 +199,14 @@ as an example for how the weather data was used.
     and represent the days that the weather data was incorporated into the
     baseball data.}
 \end{figure}
+
+{% include image.html url="plots/weather-example.jpg" alt="Figure 2 represents the daily weather data for Fenway Park.  The red line indicates maximum temperature and the blue
+line indicates minimum temperature both measured using the left y-axis.
+The black bars represent the precipitation measured using the right y-axis.
+The yellow bands indicate the dates where Red Sox played games,
+and represent the days that the weather data was incorporated into the
+baseball data." %}
+
 Despite having weather data from March 1st to October 31st,
 a small portion of that data was actually used by the regression model.
 The portion used is indicated by the yellow vertical bands.
