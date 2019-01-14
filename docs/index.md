@@ -459,7 +459,7 @@ each simulated season.
 
 {% include image.html url="plots/hist_acc.jpg" description="Figure 8: Figure
 represents the counts of season accuracy for the regressions on the 1000
-sampled seasons." &}
+sampled seasons." %}
 
 The histogram indicates a mostly normal distribution,
 perhaps slightly skewed to the left because of the few seasons that had 
