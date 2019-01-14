@@ -4,7 +4,7 @@ subtitle: With Weather Data and Recursive Logistic Regression
 author: Brendan Whitney
 ---
 
-A PDF of my report can be found [here](report_bwhitne1.pdf).
+A PDF of my report can be found [here](../report_bwhitne1.pdf).
 All code can be found on [my repository](https://github.com/brendanwhit/ds1-final-project).
 
 _This paper attempts to build a regression model to predict the winner of 
