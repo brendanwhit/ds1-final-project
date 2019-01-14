@@ -4,6 +4,9 @@ subtitle: With Weather Data and Recursive Logistic Regression
 author: Brendan Whitney
 ---
 
+A PDF of my report can be found [here](report_bwhitne1.pdf).
+All code can be found on [my repository](https://github.com/brendanwhit/ds1-final-project).
+
 _This paper attempts to build a regression model to predict the winner of 
 baseball games for the 2018 MLB season.
 The regression model is built from two disjoint datasets:
