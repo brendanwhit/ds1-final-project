@@ -134,11 +134,13 @@ and current streaks of both teams.
 From these statistics,
 Pythagorean scores and the win percentages of each team were calculated.
 For the Pythagorean score an exponent of 1.79 was used as per the Miller paper.
-The target variable of interest is whether the home team won the game.
+The target variable of interest is whether the home team won the game. Figure
+1 represents the distribution of number of games played per day for the 2018
+season.
 
-{% include image.html url="plots/desc-stats/num-games-hist.jpg" description="Figure 1
-represents the distribution of the number of games played per day over the
-course of the season" %}
+{% include image.html url="plots/desc-stats/num-games-hist.jpg" 
+description="Figure 1: Figure 1 represents the distribution of the number of games played
+per day over the course of the season." %}
 
 The number of games per day must be at least 1 and
 technically has a max value of 30 if every team played a double header.
@@ -188,24 +190,14 @@ has a fixed roof.
 Figure 2 shows the data gathered for Fenway Park,
 home of the Boston Red Sox,
 as an example for how the weather data was used.
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=.8\textwidth]{weather-example.jpg}
-    \caption{Figure~\label{Fig:Weather} represents the daily weather data for
-    Fenway Park.  The red line indicates maximum temperature and the blue
-    line indicates minimum temperature both measured using the left y-axis.
-    The black bars represent the precipitation measured using the right y-axis.
-    The yellow bands indicate the dates where Red Sox played games,
-    and represent the days that the weather data was incorporated into the
-    baseball data.}
-\end{figure}
 
-{% include image.html url="plots/weather-example.jpg" alt="Figure 2 represents the daily weather data for Fenway Park.  The red line indicates maximum temperature and the blue
-line indicates minimum temperature both measured using the left y-axis.
-The black bars represent the precipitation measured using the right y-axis.
-The yellow bands indicate the dates where Red Sox played games,
-and represent the days that the weather data was incorporated into the
-baseball data." %}
+{% include image.html url="plots/weather-example.jpg" description="Figure 2:
+Figure 2 represents the daily weather data for Fenway Park. The red line indicates
+maximum temperature and the blue line indicates minimum temperature both
+measured using the left y-axis. The black bars represent the precipitation
+measured using the right y-axis. The yellow bands indicate the dates where Red
+Sox played games, and represent the days that the weather data was incorporated
+into the baseball data." %}
 
 Despite having weather data from March 1st to October 31st,
 a small portion of that data was actually used by the regression model.
@@ -242,7 +234,7 @@ the correlation between each variable was calculated prior to the regression
 to check the validity of using certain variables for prediction.
 Logistic regression does not perform well with variables expressing 
 multicollinearity.
-Figure~\ref{Fig:Corr}(a) shows the correlation matrix for each variable for the
+Figure 3(a) shows the correlation matrix for each variable for the
 complete 2018 season.
 The correlation matrix for the season indicates high correlation between all
 of the non-calculated 
@@ -267,32 +259,21 @@ regression.
 The sampled seasons consisted of 774 games played,
 which remained enough games to justify using logistic regression for 
 prediction.
-Figure~\ref{Fig:Corr} shows a direct comparison between the correlation matrix
+Figure 3 shows a direct comparison between the correlation matrix
 for the complete 2018 season,
 and the sampled season 000.
 3(b) shows a correlation matrix for the first sampled 
 season.
-\begin{figure}
-    \centering
-    \begin{subfigure}{0.75\textwidth}
-         \includegraphics[width=\textwidth]{full-season/combined-stats-corr-mat.jpg}
-         \caption{Correlation Matrix for the full season}
-         \label{Fig:SeasonCorr}
-    \end{subfigure}
-    
-    \begin{subfigure}{0.75\textwidth}
-         \includegraphics[width=\textwidth]{sampled-season/combined-stats-corr-mat.jpg}
-         \caption{Correlation Matrix for the sampled season}
-         \label{Fig:SampleCorr}
-    \end{subfigure}
 
-    \caption{Figure~\label{Fig:Corr} shows the correlation matrices for each 
-    variable for the complete 2018 season and the sampled season 000.
-    White spaces indicate little to no 
-    correlation, and dark red spaces indicate nearly perfect positive or 
-    negative correlation.}
-\end{figure}
-omparison between the correlation matrix for the complete season and sampled
+{% include image.html 
+url="plots/corr-mats/full-season/combined-stats-corr-mat.jpg"
+description="Figure 3(a): Correlation matrix for the full season." %}
+
+{% include image.html 
+url="plots/corr-mats/sampled-season/combined-stats-corr-mat.jpg"
+description="Figure 3(b): Correlation matrix for the sampled season." %}
+
+Comparison between the correlation matrix for the complete season and sampled
 season 000,
 indicates no difference in the multicollinearity of the data.
 Therefore,
@@ -334,14 +315,13 @@ least important </caption>
 </tr>
 </table>
 
-Figure~\ref{Fig:RFR} displays the feature importance scores as the season
+Figure 4 displays the feature importance scores as the season
 progresses.
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=.8\textwidth]{feature-importance.jpg}
-    \caption{Figure~\label{Fig:RFR} shows the importance of the 6 most 
-    important features as the season progresses from March 29th to October 1st.}
-\end{figure}
+
+{% include image.html url="plots/feature-importance.jpg"
+description="Figure 4: Figure shows the importance of the 6 most important
+features as the season progresses from March 29th to October 1st." %}
+
 As the figure indicates,
 TMAX and TMIN are very important at the beginning of the season before the
 win percentages and Pythagorean scores settle down with the accumulation of
@@ -377,15 +357,14 @@ the accuracy was derived from the sum of wins by home team divided by the
 total number of games.
 The accuracy of predicting the home team as the winner was recorded for each 
 day of the season with games.
-Figure~\ref{Fig:Home-Field} indicates the daily accuracy of always picking the 
+Figure 5 indicates the daily accuracy of always picking the 
 home team to win the game.
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=.8\textwidth]{home-correctness.jpg}
-    \caption{Figure~\label{Fig:Home-Field} represents the daily accuracy of 
-    predicting the home team as the winner.  The red line indicates the season
-average of 52.86%}
-\end{figure}
+
+{% include image.html url="plots/desc-stats/home-correctness"
+description="Figure 5: Figure represents the daily accuracy of 
+predicting the home team as the winner.  The red line indicates the season
+average of 52.86%." %}
+
 For 2018,
 1283 home teams won in 2431 games played,
 which means the home team won 52.87% of the games.
@@ -402,15 +381,14 @@ this simple formula:
 If two teams had the same win percentage,
 the home team was predicted as the winner because of the slight advantage home
 teams have of winning.
-Figure~\ref{Fig:WP} represents the daily accuracy of predicting winners from 
+Figure 6 represents the daily accuracy of predicting winners from 
 their win percentage.
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=.8\textwidth]{wp-correctness.jpg}
-    \caption{Figure \label{Fig:WP} represents the daily accuracy of using win
-    percentage as a predictor.  The red line indicates the season
-average of 57.47%}
-\end{figure}
+
+{% include image.html url="plots/desc-stats/wp-correctness"
+description="Figure 6: Figure represents the daily accuracy of 
+using win percentage as a predictor.  The red line indicates the season
+average of 57.47%." %}
+
 Win percentage was a better predictor of game outcomes than home-field advantage
 alone.
 Win percentage predicted the correct outcome of the game 57.47% of the time
@@ -429,15 +407,15 @@ the home team was chosen as the winner.
 Otherwise,
 the team with the higher Pythagorean score was chosen as the victor for the
 game.
-Figure~\ref{Fig:PS} represents the daily accuracy of predicting winners from 
+Figure 7 represents the daily accuracy of predicting winners from 
 their win percentage.
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=.8\textwidth]{ps-correctness.jpg}
-    \caption{Figure \label{Fig:PS} represents the daily accuracy of using
-    Pythagorean score as a predictor.  The red line indicates the season
-average of 57.56%}
-\end{figure}
+
+{% include image.html url="plots/desc-stats/ps-correctness"
+description="Figure 7: Figure represents the daily accuracy of 
+using Pythagorean score as a predictor.  The red line indicates the season
+average of 57.56%." %}
+
+
 The Pythagorean score slightly improved upon win percentage as a predictor.
 Both the accuracy,
 57.56% compared to 57.47%,
@@ -476,14 +454,13 @@ the accuracy of the complete season is within 1 standard deviation of the mean
 for the sampled seasons,
 which is what we would expect considering the full season is the source of the
 sampled seasons.
-Figure~\ref{Fig:SampResults} shows the histogram of the regression accuracy for
+Figure 8 shows the histogram of the regression accuracy for
 each simulated season.
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=.8\textwidth]{hist_acc.jpg}
-    \caption{Figure \label{Fig:SampResults} represents the counts of season
-    accuracy for the regressions on the 1000 sampled seasons.}
-\end{figure}
+
+{% includes image.html url="plots/hist_acc.jpg" description="Figure 8: Figure
+represents the counts of season accuracy for the regressions on the 1000
+sampled seasons." &}
+
 The histogram indicates a mostly normal distribution,
 perhaps slightly skewed to the left because of the few seasons that had 
 accuracies near 50%.
