@@ -441,6 +441,16 @@ The confusion matrix of the regression is below:
      & Total & 896 & 1522 & 2418
 \end{tabular}
 \end{table}
+ 
+ <center>
+ | | Loss | Win | Total |
+ | --- | --- | -:- | -:- |
+ | Loss | 494 | 648 | 1142 | 
+ | Win | 402 | 874 | 1276 |
+ | Total | 896 | 1522 | 2418 |
+ </center>
+
+
 From the confusion matrix,
 the model over predicts the number of wins of the home team,
 which is indicative of the model representing the home field advantage by
