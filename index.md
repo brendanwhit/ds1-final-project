@@ -69,13 +69,13 @@ Other literature on the topic of game prediction for baseball,
 introduced the idea of the Pythagorean Formula
 for predicting end of season win percentage for a given team.
 The Pythagorean Formula is defined as:
-<a href="https://www.codecogs.com/eqnedit.php?latex=\cfrac{RS_{obs}^\gamma}&space;{RS_{obs}^\gamma&space;&plus;&space;RA_{obs}^\gamma}" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\cfrac{RS_{obs}^\gamma}&space;{RS_{obs}^\gamma&space;&plus;&space;RA_{obs}^\gamma}" title="\cfrac{RS_{obs}^\gamma} {RS_{obs}^\gamma + RA_{obs}^\gamma}" /></a>
 
+<a href="https://www.codecogs.com/eqnedit.php?latex=\LARGE&space;\cfrac{RS_{obs}^\gamma}&space;{RS_{obs}^\gamma&space;&plus;&space;RA_{obs}^\gamma}" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\LARGE&space;\cfrac{RS_{obs}^\gamma}&space;{RS_{obs}^\gamma&space;&plus;&space;RA_{obs}^\gamma}" title="\LARGE \cfrac{RS_{obs}^\gamma} {RS_{obs}^\gamma + RA_{obs}^\gamma}" /></a>
 
-# (\[)
-# (\cfrac{RS_{obs}^\gamma})
-#    ({RS_{obs}^\gamma + RA_{obs}^\gamma})
-# (\])
+ # (\[)
+ # (\cfrac{RS_{obs}^\gamma})
+ #    ({RS_{obs}^\gamma + RA_{obs}^\gamma})
+ # (\])
 
 Where RS<sub>obs</sub> represents the number of observed runs scored for a team,
 and RA<sub>obs</sub> represents the number of observed runs allowed for a team.
@@ -380,11 +380,14 @@ To use the win percentage as an indicator of the victor of each game,
 the team with the highest win percentage was chosen as the victor.
 Win percentage is calculated from the wins and losses of each team according to
 this simple formula:
-\[
-    WP
-    =
-    \cfrac{W}{W+L}
-\]
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\LARGE&space;WP&space;=&space;\cfrac{W}{W&plus;L}" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\LARGE&space;WP&space;=&space;\cfrac{W}{W&plus;L}" title="\LARGE WP = \cfrac{W}{W+L}" /></a>
+
+ # (\[)
+ #   (WP)
+ #   (=)
+ #   (\cfrac{W}{W+L})
+ # (\])
 If two teams had the same win percentage,
 the home team was predicted as the winner because of the slight advantage home
 teams have of winning.
