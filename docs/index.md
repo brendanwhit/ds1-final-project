@@ -145,9 +145,9 @@ per day over the course of the season.
     games played per day.}
 \end{figure}
 
-![Figure 1](/plots/desc-stats/num-games-hist.jpg)
+![Figure 1](plots/desc-stats/num-games-hist.jpg)
 
-{% include image.html url="/plots/desc-stats/num-games-hist.jpg" description="Figure 1
+{% include image.html url="plots/desc-stats/num-games-hist.jpg" description="Figure 1
 represents the distribution of the number of games played per day over the
 course of the season" %}
 
