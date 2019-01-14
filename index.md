@@ -447,7 +447,7 @@ The confusion matrix of the regression is below:
  
  <center>
  | | Loss | Win | Total |
- | --- | --- | -:- | -:- |
+ | --- | --- | :---: | :---: |
  | Loss | 494 | 648 | 1142 | 
  | Win | 402 | 874 | 1276 |
  | Total | 896 | 1522 | 2418 |
