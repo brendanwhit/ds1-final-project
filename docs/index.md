@@ -144,6 +144,11 @@ per day over the course of the season.
     \caption{Figure~\label{Fig:GPD} represents the distribution of number of 
     games played per day.}
 \end{figure}
+
+{% include image.html url="/plots/desc-stats/num-games-hist.jpg" description="Figure 1
+represents the distribution of the number of games played per day over the
+course of the season" %}
+
 The number of games per day must be at least 1 and
 technically has a max value of 30 if every team played a double header.
 However,
