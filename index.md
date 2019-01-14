@@ -305,7 +305,8 @@ the feature importance scores were recorded.
 From the RFR,
 the six most important variables were chosen, where importance was
 averaged over the entire season.
-Table~\ref{Tab:Importance}
+Table 1 shows the 6 most important features.
+
 \begin{table}[ht]
     \centering
     \begin{tabular}{l | c c c c c c}
@@ -315,7 +316,33 @@ Table~\ref{Tab:Importance}
     \end{tabular}
     \caption{Table~\label{Tab:Importance} indicates the 6 most important
 features ranked from most to least important.}
+
+
 \end{table}
+
+<table>
+<caption> Table 1 indicates the 6 most important features ranked from most to 
+least important </caption>
+<tr>
+<th> Feature </th>
+<td> Away_PS </td>
+<td> TMAX </td>
+<td> Home_PS </td>
+<td> TMIN </td>
+<td> Home_WP </td>
+<td> Away_WP </td>
+</tr>
+<tr>
+<th> Importance Score </th>
+<td> 0.111 </td>
+<td> 0.101 </td>
+<td> 0.098 </td>
+<td> 0.089 </td>
+<td> 0.076 </td>
+<td> 0.075 </td>
+</tr>
+</table>
+
 Figure~\ref{Fig:RFR} displays the feature importance scores as the season
 progresses.
 \begin{figure}[ht]
@@ -433,52 +460,12 @@ The logistic regressor compiled for the complete 2018 season using the
 six features extracted from the RFR predicted game results with 
 56.58% accuracy.
 The confusion matrix of the regression is below:
-\begin{table}[ht]
-    \centering
-\begin{tabular}{c c c c c}
-    \multirow{6}{*}{\rotatebox{90}{\parbox{1.1cm}{\centering Actual}}} & & 
-    \multicolumn{2}{c}{Predicted} & \\
-     & & Loss & Win & Total \\
-     & Loss & 494 & 648 & 1142 \\
-     & Win & 402 & 874 & 1276 \\
-     & Total & 896 & 1522 & 2418
-\end{tabular}
-\end{table}
- 
-<center><table>
-<tr>
-<th> </th>
-<th> Loss </th>
-<th> Win </th>
-<th> Total </th>
-</tr>
-<tr>
-<td> Loss </td>
-<td> 494 </td>
-<td> 648 </td>
-<td> 1142 </td>
-</tr>
-<tr>
-<td> Win </td>
-<td> 402 </td>
-<td> 874 </td>
-<td> 1276 </td>
-</tr>
-<tr>
-<td> Total </td>
-<td> 896 </td>
-<td> 1522 </td>
-<td> 2418 </td>
-</tr>
-</table></center>
-
 
  |  | Loss | Win | Total |
- | --- | --- | :---: | :---: |
+ | --- | :---: | :---: | :---: |
  | Loss | 494 | 648 | 1142 | 
  | Win | 402 | 874 | 1276 |
  | Total | 896 | 1522 | 2418 |
-
 
 From the confusion matrix,
 the model over predicts the number of wins of the home team,
