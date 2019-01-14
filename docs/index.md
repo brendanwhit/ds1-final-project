@@ -139,7 +139,7 @@ The target variable of interest is whether the home team won the game. Figure
 season.
 
 {% include image.html url="plots/desc-stats/num-games-hist.jpg" 
-description="Figure 1: Figure 1 represents the distribution of the number of games played
+description="Figure 1: Figure represents the distribution of the number of games played
 per day over the course of the season." %}
 
 The number of games per day must be at least 1 and
@@ -192,7 +192,7 @@ home of the Boston Red Sox,
 as an example for how the weather data was used.
 
 {% include image.html url="plots/weather-example.jpg" description="Figure 2:
-Figure 2 represents the daily weather data for Fenway Park. The red line indicates
+Figure represents the daily weather data for Fenway Park. The red line indicates
 maximum temperature and the blue line indicates minimum temperature both
 measured using the left y-axis. The black bars represent the precipitation
 measured using the right y-axis. The yellow bands indicate the dates where Red
@@ -457,7 +457,7 @@ sampled seasons.
 Figure 8 shows the histogram of the regression accuracy for
 each simulated season.
 
-{% includes image.html url="plots/hist_acc.jpg" description="Figure 8: Figure
+{% include image.html url="plots/hist_acc.jpg" description="Figure 8: Figure
 represents the counts of season accuracy for the regressions on the 1000
 sampled seasons." &}
 
