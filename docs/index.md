@@ -73,6 +73,12 @@ introduced the idea of the Pythagorean Formula
 for predicting end of season win percentage for a given team.
 The Pythagorean Formula is defined as:
 
+<center><a
+href="https://www.codecogs.com/eqnedit.php?latex=\large&space;\cfrac{RS_{obs}^\gamma}{RS_{obs}^\gamma&space;&plus;&space;RA_{obs}^\gamma}"
+target="_blank"><img
+src="https://latex.codecogs.com/svg.latex?\large&space;\cfrac{RS_{obs}^\gamma}{RS_{obs}^\gamma&space;&plus;&space;RA_{obs}^\gamma}"
+title="\large \cfrac{RS_{obs}^\gamma}{RS_{obs}^\gamma + RA_{obs}^\gamma}" /></a></center>
+
 <center><a href="https://www.codecogs.com/eqnedit.php?latex=\large&space;\cfrac{RS_{obs}^\gamma}&space;{RS_{obs}^\gamma&space;&plus;&space;RA_{obs}^\gamma}" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\large&space;\cfrac{RS_{obs}^\gamma}&space;{RS_{obs}^\gamma&space;&plus;&space;RA_{obs}^\gamma}" title="\large \cfrac{RS_{obs}^\gamma} {RS_{obs}^\gamma + RA_{obs}^\gamma}" /></a></center>
 
 Where RS<sub>obs</sub> represents the number of observed runs scored for a team,
