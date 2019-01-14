@@ -79,8 +79,6 @@ target="_blank"><img
 src="https://latex.codecogs.com/svg.latex?\LARGE&space;\cfrac{RS_{obs}^\gamma}{RS_{obs}^\gamma&space;&plus;&space;RA_{obs}^\gamma}"
 title="\LARGE \cfrac{RS_{obs}^\gamma}{RS_{obs}^\gamma + RA_{obs}^\gamma}" /></a></center>
 
-<center><a href="https://www.codecogs.com/eqnedit.php?latex=\large&space;\cfrac{RS_{obs}^\gamma}&space;{RS_{obs}^\gamma&space;&plus;&space;RA_{obs}^\gamma}" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\large&space;\cfrac{RS_{obs}^\gamma}&space;{RS_{obs}^\gamma&space;&plus;&space;RA_{obs}^\gamma}" title="\large \cfrac{RS_{obs}^\gamma} {RS_{obs}^\gamma + RA_{obs}^\gamma}" /></a></center>
-
 Where RS<sub>obs</sub> represents the number of observed runs scored for a team,
 and RA<sub>obs</sub> represents the number of observed runs allowed for a team.
 &gamma; is an exponent that is constant for all the teams in the league.
