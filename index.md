@@ -445,13 +445,39 @@ The confusion matrix of the regression is below:
 \end{tabular}
 \end{table}
  
- <center>
+<center><table>
+<tr>
+<th> </th>
+<th> Loss </th>
+<th> Win </th>
+<th> Total </th>
+</tr>
+<tr>
+<td> Loss </td>
+<td> 494 </td>
+<td> 648 </td>
+<td> 1142 </td>
+</tr>
+<tr>
+<td> Win </td>
+<td> 402 </td>
+<td> 874 </td>
+<td> 1276 </td>
+</tr>
+<tr>
+<td> Total </td>
+<td> 896 </td>
+<td> 1522 </td>
+<td> 2418 </td>
+</tr>
+</table></center>
+
+
  | test | Loss | Win | Total |
  | --- | --- | :---: | :---: |
  | Loss | 494 | 648 | 1142 | 
  | Win | 402 | 874 | 1276 |
  | Total | 896 | 1522 | 2418 |
- </center>
 
 
 From the confusion matrix,
