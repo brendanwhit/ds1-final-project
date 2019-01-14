@@ -73,7 +73,7 @@ introduced the idea of the Pythagorean Formula
 for predicting end of season win percentage for a given team.
 The Pythagorean Formula is defined as:
 
-<center><a href="https://www.codecogs.com/eqnedit.php?latex=\cfrac{RS_{obs}^\gamma}&space;{RS_{obs}^\gamma&space;&plus;&space;RA_{obs}^\gamma}" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\LARGE&space;\cfrac{RS_{obs}^\gamma}&space;{RS_{obs}^\gamma&space;&plus;&space;RA_{obs}^\gamma}" title="\LARGE \cfrac{RS_{obs}^\gamma} {RS_{obs}^\gamma + RA_{obs}^\gamma}" /></a></center>
+<center><a href="https://www.codecogs.com/eqnedit.php?latex=\cfrac{RS_{obs}^\gamma}&space;{RS_{obs}^\gamma&space;&plus;&space;RA_{obs}^\gamma}" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\cfrac{RS_{obs}^\gamma}&space;{RS_{obs}^\gamma&space;&plus;&space;RA_{obs}^\gamma}" title="\cfrac{RS_{obs}^\gamma} {RS_{obs}^\gamma + RA_{obs}^\gamma}" /></a></center>
 
 Where RS<sub>obs</sub> represents the number of observed runs scored for a team,
 and RA<sub>obs</sub> represents the number of observed runs allowed for a team.
@@ -376,7 +376,7 @@ the team with the highest win percentage was chosen as the victor.
 Win percentage is calculated from the wins and losses of each team according to
 this simple formula:
 
-<center><a href="https://www.codecogs.com/eqnedit.php?latex=WP&space;=&space;\cfrac{W}{W&plus;L}" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\LARGE&space;WP&space;=&space;\cfrac{W}{W&plus;L}" title="\LARGE WP = \cfrac{W}{W+L}" /></a></center>
+<center><a href="https://www.codecogs.com/eqnedit.php?latex=WP&space;=&space;\cfrac{W}{W&plus;L}" target="_blank"><img src="https://latex.codecogs.com/svg.latex?WP&space;=&space;\cfrac{W}{W&plus;L}" title="WP = \cfrac{W}{W+L}" /></a></center>
 
 If two teams had the same win percentage,
 the home team was predicted as the winner because of the slight advantage home
