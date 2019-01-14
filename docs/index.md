@@ -360,7 +360,7 @@ day of the season with games.
 Figure 5 indicates the daily accuracy of always picking the 
 home team to win the game.
 
-{% include image.html url="plots/desc-stats/home-correctness"
+{% include image.html url="plots/desc-stats/home-correctness.jpg"
 description="Figure 5: Figure represents the daily accuracy of 
 predicting the home team as the winner.  The red line indicates the season
 average of 52.86%." %}
@@ -384,7 +384,7 @@ teams have of winning.
 Figure 6 represents the daily accuracy of predicting winners from 
 their win percentage.
 
-{% include image.html url="plots/desc-stats/wp-correctness"
+{% include image.html url="plots/desc-stats/wp-correctness.jpg"
 description="Figure 6: Figure represents the daily accuracy of 
 using win percentage as a predictor.  The red line indicates the season
 average of 57.47%." %}
@@ -410,7 +410,7 @@ game.
 Figure 7 represents the daily accuracy of predicting winners from 
 their win percentage.
 
-{% include image.html url="plots/desc-stats/ps-correctness"
+{% include image.html url="plots/desc-stats/ps-correctness.jpg"
 description="Figure 7: Figure represents the daily accuracy of 
 using Pythagorean score as a predictor.  The red line indicates the season
 average of 57.56%." %}
