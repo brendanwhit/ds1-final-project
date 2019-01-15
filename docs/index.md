@@ -1,8 +1,8 @@
 ---
 title: Predicting Baseball Game Outcomes
-subtitle: With Weather Data and Recursive Logistic Regression
 author: Brendan Whitney
 ---
+## With Weather Data and Recursive Logistic Regression
 
 A PDF of my report can be found [here](report.pdf).
 All code can be found on [my repository](https://github.com/brendanwhit/ds1-final-project).
@@ -35,7 +35,7 @@ pure statistics of the teams entering the contest.
 Considering just statistics of the two teams does not include other potentially
 important information,
 such as injuries to important players,
-or the atmosphere of the team \cite{Boulier}.
+or the atmosphere of the team. [^1] \cite{Boulier}
 That extraneous information has long been believed to play a role in the
 results of contests.
 This manifests itself in what we would consider to be luck,
@@ -514,4 +514,6 @@ and I am not giving up on this idea just yet.
 
 ## Bibliography
 
-
+[^1]: [B. L. Boulier and H. Stekler, "Predicting the outcomes of National League
+Football Games," _International Journal of Foreccasting_, vol. 19, no. 2, 
+pp. 257-270, 2003](lit-review/boulier2003.pdf)
