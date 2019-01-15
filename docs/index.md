@@ -35,7 +35,7 @@ pure statistics of the teams entering the contest.
 Considering just statistics of the two teams does not include other potentially
 important information,
 such as injuries to important players,
-or the atmosphere of the team. [^1] \cite{Boulier}
+or the atmosphere of the team [^1].
 That extraneous information has long been believed to play a role in the
 results of contests.
 This manifests itself in what we would consider to be luck,
@@ -45,7 +45,7 @@ Perhaps what we currently percieve as luck in sports games is instead simply
 not having the vital data required to correctly predict outcomes.
 
 Building off of work done by Boulier and Stekler regarding predicting the
-outcomes of National Football League games \cite{Boulier},
+outcomes of National Football League games [^1],
 I attempt to predict the outcome of games in the MLB.
 Boulier and Stekler utilize the New York Times power ranking algorithm to 
 test whether the power ranking was a useful measure for predicting the outcome
@@ -86,7 +86,7 @@ Originally proposed by statistician and baseball writer Bill James,
 the Pythagorean Formula was given statistical proof by Steven Miller in 2007.
 Miller determined from a Weibull distribution built from the Pythagorean 
 Formula that &gamma;=1.79 was the best fit for the American League teams in
-2014 \cite{Miller}.
+2014 [^2].
 The theoretical model also shows that the runs scored and allowed per game
 are statistically independent events,
 which makes them useful for modeling the winner of the games.
@@ -101,7 +101,7 @@ for the 2018 season.
 An article written by Cesar Soto-Valero regarding the use of data
 mining techniques to enhance predictive techniques lent many good ideas 
 regarding the construction of the data for improved predictive performance
-\cite{Cesar}.
+[^3].
 Soto-Valero utilizes cumulative statistics to represent the knowledge of 
 a season entering a particular game.
 This method of accumulating information as the season progresses will be
@@ -514,6 +514,13 @@ and I am not giving up on this idea just yet.
 
 ## Bibliography
 
-[^1]: [B. L. Boulier and H. Stekler, "Predicting the outcomes of National League
+[^1]: B. L. Boulier and H. Stekler, "Predicting the outcomes of National League
 Football Games," _International Journal of Foreccasting_, vol. 19, no. 2, 
-pp. 257-270, 2003](lit-review/boulier2003.pdf)
+pp. 257-270, 2003
+
+[^2]: S. J. Miller, "A Derivation of the Pythagorean Won-Loss Formula in
+Baseball," _ArXiv Mathematics e-prints_, Sept. 2005.
+
+[^3]: C. Soto-Valero, "Predicting Win-Loss Outcomes in MLB Regular Season Games
+-- a Comparitive Study Using Data Mining Methods," _International Journal of 
+Computer Science in Sport, pp. 91-112, 2016.
